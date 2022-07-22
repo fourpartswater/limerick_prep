@@ -1,10 +1,4 @@
-# Bioconductor cheat sheet
 
-Also useful are Kasper Daniel Hansen's [Bioconductor class notes](http://kasperdanielhansen.github.io/genbioconductor/).
-
-## Install
-
-For details go to http://bioconductor.org/install/
 
 ```
 if (!requireNamespace("BiocManager"))
@@ -459,6 +453,7 @@ efit <- eBayes(fit)
 topTable(efit, coef=2)
 ```
 
+http://kasperdanielhansen.github.io/genbioconductor/
 ## iCOBRA performance metrics
 
 ```
