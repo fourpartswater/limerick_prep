@@ -13,9 +13,8 @@ http://bioconductor.org/bioc-version
 http://bioconductor.org/js/versions.js
 ```
 
-## help within R
 
-Simple help:
+## Simple help:
 
 ```
 ?functionName
@@ -25,7 +24,7 @@ vignette("topic")
 browseVignettes(package="package") # show vignettes for the package
 ```
 
-Help for advanced users:
+## Advanced
 
 ```
 functionName # prints source code
@@ -41,15 +40,12 @@ sessionInfo() # necessary info for getting help
 packageVersion("foo") # what version of package 
 ```
 
-Bioconductor support website: https://support.bioconductor.org
-
-If you use RStudio, then you already get nicely rendered documentation using `?` or `help`. If you are a command line person, then you can use this alias to pop up a help page in your web browser with `rhelp functionName packageName`.
 
 ```
 alias rhelp="Rscript -e 'args <- commandArgs(TRUE); help(args[2], package=args[3], help_type=\"html\"); Sys.sleep(5)' --args"
 ```
 
-## debugging R
+## debugging
 
 ```
 traceback() # what steps lead to an error
@@ -69,7 +65,7 @@ options(error=NULL)
 trace(estimateSizeFactors, browser, exit=browser, signature="DESeqDataSet")
 ```
 
-## Show package-specific methods for a class
+## Package-specific methods
 
 These two long strings of R code do approximately the same thing: obtain 
 the methods that operate on an object of a given class, which are defined
@@ -82,9 +78,8 @@ sub("Function: (.*) \\(package .*\\)","\\1",grep("Function",showMethods(classes=
 
 ## Annotations
 
-**Edit (May 2017)**: the below needs to be updated to show off AnnotationHub.
 
-For AnnotationHub examples, see:
+AnnotationHub examples:
 
 https://www.bioconductor.org/help/workflows/annotation/Annotation_Resources
 
